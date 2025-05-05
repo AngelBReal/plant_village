@@ -4,11 +4,12 @@ import numpy as np
 import base64
 import io
 from PIL import Image
+import os
 
 app = Flask(__name__)
 
 # Cargar modelo TFLite para plant leaves
-interpreter = tf.lite.Interpreter(model_path="models\h5\plant_leaves_classifier_expert.tflite")
+interpreter = tf.lite.Interpreter(model_path="models/h5/plant_leaves_classifier_expert.tflite")
 interpreter.allocate_tensors()
 
 # Obtener info de entrada/salida
@@ -84,4 +85,5 @@ def predict():
     })
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
