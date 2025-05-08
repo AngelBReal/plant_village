@@ -82,7 +82,7 @@ Este proyecto es de uso libre con fines educativos y experimentales.
 ---
 
 ## Autor
-**Tu Nombre**  
+**Angel Barraza Real**  
 [GitHub](https://github.com/AngelBReal)  
 [LinkedIn](https://www.linkedin.com/in/angelbarrazareal/)  
 
